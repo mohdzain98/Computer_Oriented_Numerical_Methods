@@ -120,14 +120,14 @@ def phi(t,m,c):
     return f
 
 res=phi(t,m,c)+phi(-t,m,c)
-print("approx value :",round(res,4))
+print("approx value :",round(res,7))
 
 def exact(z):
     ret=math.sqrt(1+math.pow(z,2))*math.exp(-z)
     return ret
 
 evalue,err=quad(exact,2,4)
-print("exact value  :",round(evalue,4))
+print("exact value  :",round(evalue,7))
 
 error=abs(evalue-res)
 print("error : ",round(error,7))
